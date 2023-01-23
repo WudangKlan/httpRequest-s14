@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 import MoviesList from "./components/MoviesList";
 import "./App.css";
@@ -19,7 +19,7 @@ function App() {
   //   },
   // ];
 
-  const [movies , setMovies ]= useState([])
+  const [movies, setMovies] = useState([]);
   //console.log(movies)
   const fetchMoviesHandler = () => {
     fetch("https://swapi.dev/api/films")
@@ -35,7 +35,7 @@ function App() {
             releaseDate: movieData.release_date,
           };
         });
-        setMovies(transformedMovies)
+        setMovies(transformedMovies);
       });
   };
 
